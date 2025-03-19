@@ -159,7 +159,7 @@ function pauseArtworkAnimation() {
 }
 
 function getCurrentLanguage() {
-    document.documentElement.getAttribute('lang');
+    return document.documentElement.getAttribute('lang');
 }
 
 function startScroll() {
