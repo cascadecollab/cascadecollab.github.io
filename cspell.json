@@ -1,0 +1,17 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "icónico"
+    ],
+    "ignoreWords": [],
+    "import": [],
+    "overrides": [
+        {
+            "language": "es",
+            "filename": "**/es/*.html"
+        }
+    ]
+}

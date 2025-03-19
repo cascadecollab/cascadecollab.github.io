@@ -1,0 +1,233 @@
+- image: "1.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "25%"
+          left: "40%"
+        mobile:
+          top: "25%"
+          left: "40%"
+
+- image: "2.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "10%"
+          left: "50%"
+        mobile:
+          top: "10%"
+          left: "50%"
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "45%"
+          left: "35%"
+        mobile:
+          top: "45%"
+          left: "35%"
+
+- image: "3.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "0%"
+          left: "40%"
+        mobile:
+          top: "0%"
+          left: "40%"
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "50%"
+          left: "35%"
+        mobile:
+          top: "50%"
+          left: "35%"
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "75%"
+          left: "25%"
+        mobile:
+          top: "75%"
+          left: "25%"
+
+- image: "4.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "25%"
+          left: "20%"
+        mobile:
+          top: "15%"
+          left: "20%"
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "60%"
+          left: "45%"
+        mobile:
+          top: "60%"
+          left: "45%"
+
+- image: "5.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "10%"
+          left: "50%"
+        mobile:
+          top: "10%"
+          left: "45%"
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "50%"
+          left: "45%"
+        mobile:
+          top: "50%"
+          left: "45%"
+
+- image: "6.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "-5%"
+          left: "40%"
+        mobile:
+          top: "-15%"
+          left: "40%"
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "10%"
+          left: "45%"
+        mobile:
+          top: "10%"
+          left: "45%"
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "50%"
+          left: "40%"
+        mobile:
+          top: "50%"
+          left: "40%"
+
+- image: "7.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "30%"
+          left: "45%"
+        mobile:
+          top: "30%"
+          left: "45%"
+
+- image: "8.png"
+  characters:
+    - franchise: "???"
+      name: "???"
+      artist:
+        name: "???"
+        socials:
+          - platform: "placeholder"
+            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+      position:
+        desktop:
+          top: "0%"
+          left: "45%"
+        mobile:
+          top: "0%"
+          left: "45%"

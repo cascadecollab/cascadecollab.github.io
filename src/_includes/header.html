@@ -1,0 +1,89 @@
+<header class="bg-blue-500 dark:bg-blue-900 text-white py-4">
+    <div class="container mx-auto flex flex-wrap items-center justify-between px-6">
+        <div class="flex items-center w-full md:w-auto justify-between">
+            <h1 class="text-3xl font-bold">Cascade Collab</h1>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none" onclick="toggleMenuMobile()">
+                ☰
+            </button>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav id="nav-menu" class="w-full md:w-auto mt-4 md:mt-0 hidden md:flex">
+            <ul class="flex flex-col md:flex-row gap-4 md:gap-6">
+                <li>
+                    {% if page.lang == 'es' %}
+                        <a href="/es/" class="{% if page.url == '/es/' %}font-bold{% endif %} hover:underline">Inicio</a>
+                    {% else %}
+                        <a href="/" class="{% if page.url == '/' %}font-bold{% endif %} hover:underline">Home</a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if page.lang == 'es' %}
+                        <a href="/es/blog/" class="{% if page.url contains '/es/blog' %}font-bold{% endif %} hover:underline">Blog</a>
+                    {% else %}
+                        <a href="/blog/" class="{% if page.url contains '/blog' %}font-bold{% endif %} hover:underline">Blog</a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if page.lang == 'es' %}
+                        <a href="/es/participate/" class="{% if page.url == '/es/participate/' %}font-bold{% endif %} hover:underline">Participa</a>
+                    {% else %}
+                        <a href="/participate/" class="{% if page.url == '/participate/' %}font-bold{% endif %} hover:underline">Participate</a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if page.lang == 'es' %}
+                        <a href="/es/artwork/" class="{% if page.url == '/es/artwork/' %}font-bold{% endif %} hover:underline">La Ilustración</a>
+                    {% else %}
+                        <a href="/artwork/" class="{% if page.url == '/artwork/' %}font-bold{% endif %} hover:underline">The Artwork</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Theme & Language Switchers -->
+        <div class="flex gap-4 mt-4 md:mt-0">
+            <select id="theme-switcher" class="p-2 bg-white dark:bg-gray-800 text-black dark:text-white border rounded" onchange="setTheme(this.value)">
+                <option value="system">
+                    {% if page.lang == 'es' %}
+                        &#127760; Tema
+                    {% else %}
+                        &#127760; Theme
+                    {% endif %}
+                </option>
+                <option value="light">
+                    {% if page.lang == 'es' %}
+                        &#9728;&#65039; Claro
+                    {% else %}
+                        &#9728;&#65039; Light
+                    {% endif %}
+                </option>
+                <option value="dark">
+                    {% if page.lang == 'es' %}
+                        &#127769; Oscuro
+                    {% else %}
+                        &#127769; Dark
+                    {% endif %}
+                </option>
+            </select>
+
+            <select id="language-switcher" class="p-2 bg-white dark:bg-gray-800 text-black dark:text-white border rounded" onchange="switchLanguage(this.value)">
+                <option value="en">&#127468;&#127463; English</option>
+                <option value="es">&#127466;&#127480; Español</option>
+            </select>
+        </div>
+
+        <!-- Project Description -->
+        <div class="w-full text-center mt-4">
+            <p class="text-gray-200 dark:text-gray-300">
+                {% if page.lang == 'es' %}
+                    Un proyecto de colaboración para conectar aristas y fans ¡Exhíbe tu arte en esta particular pieza!
+                {% else %}
+                    A collaborative art project to connect artists and fans. Showcase your art in this unique piece!
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</header>

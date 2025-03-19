@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    color-scheme: light dark;
+}
+
+#artwork-container img {
+    display: block; /* Removes gaps */
+    width: 100%; /* Ensures full width */
+    margin: 0; /* No gaps between images */
+    padding: 0;
+}

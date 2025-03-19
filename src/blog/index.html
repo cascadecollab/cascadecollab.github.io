@@ -1,0 +1,23 @@
+---
+layout: default
+title: Cascade Collab - Blog
+permalink: /blog/
+lang: en
+---
+
+<ul>
+  {% assign en_posts = site.posts | where: 'lang', 'en' %}
+  {% for post in en_posts %}
+  {% include date.html date=post.date %}
+    <li class="mb-4">
+      <a href="{{ post.url }}" class="text-blue-500 hover:underline text-2xl font-semibold">
+        {{ post.title }}
+      </a>
+      <p class="text-gray-500 text-sm dark:test-gray-300">{{ month }} {{ day }}, {{ year }}</p>
+      <div class="mt-2 text-gray-700 dark:text-gray-400">
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ post.url }}" class="text-blue-500 hover:underline">Read more →</a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,29 @@
+{
+  "name": "cascadecollab",
+  "version": "1.0.0",
+  "description": "A collaboration project to showcase multiple art styles.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "tailwind": "tailwindcss -i _tailwind/input.css -o src/assets/css/main.css",
+    "tailwind-watch": "tailwindcss -i _tailwind/input.css -o src/assets/css/main.css --watch",
+    "jekyll-serve": "jekyll serve --port 4300",
+    "live-server": "live-server --port=8085 --no-css-inject _site",
+    "live-server-headless": "live-server --port=8085 --no-css-inject --no-browser _site"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cascadecollab/cascadecollab.github.io.git"
+  },
+  "author": "Lordscales91",
+  "bugs": {
+    "url": "https://github.com/cascadecollab/cascadecollab.github.io/issues"
+  },
+  "homepage": "https://github.com/cascadecollab/cascadecollab.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.12",
+    "live-server": "^1.2.2",
+    "tailwindcss": "^4.0.12"
+  }
+}
