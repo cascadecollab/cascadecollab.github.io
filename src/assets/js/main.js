@@ -130,9 +130,9 @@ function startArtworkAnimation() {
 function stopArtworkAnimation() {
     const buttonText = document.getElementById("scroll-music-text");
     if(getCurrentLanguage() === 'es') {
-        buttonText.textContent = "▶️ Repetir";
+        buttonText.textContent = "🔄 Repetir";
     } else {
-        buttonText.textContent = "▶️ Replay";
+        buttonText.textContent = "🔄 Replay";
     }
     audio.pause();
     audio.fastSeek(0);
