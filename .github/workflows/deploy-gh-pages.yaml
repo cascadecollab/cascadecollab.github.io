@@ -20,8 +20,8 @@ jobs:
           node-version: 18
       - name: Install NPM Dependencies
         run: npm install
-      - name: Ensure latest CSS
-        run: npm run tailwind
+      - name: Regenerate CSS minified
+        run: npm run tailwind-min
       - name: Build Jekyll site
         run: bundle exec jekyll build
       - name: Upload artifact

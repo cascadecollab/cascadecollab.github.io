@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "tailwind": "tailwindcss -i _tailwind/input.css -o src/assets/css/main.css",
+    "tailwind-min": "tailwindcss --minify -i _tailwind/input.css -o src/assets/css/main.css",
     "tailwind-watch": "tailwindcss -i _tailwind/input.css -o src/assets/css/main.css --watch",
     "jekyll-serve": "jekyll serve --port 4300",
     "live-server": "live-server --port=8085 --no-css-inject _site",
