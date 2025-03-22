@@ -7,13 +7,30 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/scroller.js"></script>
+    {% if page.name == 'artwork.html' %}
+        <script src="/assets/js/artwork.js"></script>
+    {% endif %}
 </head>
 
 <body class="bg-white dark:bg-neutral-950 dark:text-white">
     {% include header.html %}
     <main class="{% unless page.fullwidth %}max-w-3xl mx-auto{% endunless %} px-6 py-12">
         {{ content }}
+        <!-- Place the disclaimer right after the content within the main block 
+         for those pages that don't include the footer -->
+        {% if page.no_footer %}
+            <p class="mt-4 text-center px-6 text-gray-600 dark:text-gray-400 text-sm"><em>{% include disclaimer.html %}</em></p>
+        {% endif %}
+        <button id="scrollToTop" class="fixed cursor-pointer bottom-4 right-4 bg-blue-500 dark:bg-blue-900 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg opacity-0 hidden transition-opacity duration-300" onclick="scrollToTop()">
+            ▲
+        </button>
     </main>
+    {% unless page.no_footer %}
+    <footer class="max-w-3xl mx-auto text-center px-6 text-gray-600 dark:text-gray-400 text-sm">        
+        <p><em>{% include disclaimer.html %}</em></p>
+    </footer>
+    {% endunless %}
 </body>
 
 </html>

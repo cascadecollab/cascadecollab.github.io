@@ -3,19 +3,38 @@ layout: default
 title: Cascade Collab - Artwork
 lang: en
 fullwidth: true
+no_footer: true
+artwork_chars_done: 0
 ---
 
 <section class="text-center">
     <h1 class="text-4xl font-bold">The Artwork</h1>
     <p class="mt-4 text-gray-700 dark:text-gray-300">
-        A seamless collaboration featuring the styles of multiple artists.
+        {% if page.artwork_chars_done == 0 %}
+            This page will contain the final artwork eventually, for now it is just the 
+            drawing base. 
+        {% elsif page.artwork_chars_done < 15 %}
+            This page will contain the final artwork eventually, characters will be added 
+            as they are done.
+        {% else %}
+            This is the final result of the collaboration. Enjoy it!
+        {% endif %}
     </p>
     <p class="mt-4 text-gray-700 dark:text-gray-300">
-        You can use the ▶️ Play button in the bottom left corner to play the animation.<br> 
-        <b>Please, for a better experience, do not scroll while the animation is playing.</b><br>
-        You can pause it at any time pressing the button again.
+        {% if page.artwork_chars_done < 15 %}
+            You can scroll down to check which characters will be drawn.<br>
+            The characters will be revealed gradually.
+        {% else %}
+            You can use the ▶️ Play button in the bottom left corner to play the animation.<br> 
+            <b>Please, for a better experience, do not scroll while the animation is playing.</b><br>
+            You can pause it at any time by pressing the button again.
+        {% endif %}
     </p>
 
+    <p class="mt-4 text-gray-700 dark:text-gray-300">
+        Stay up to date with project's progress on the <a class="text-blue-500 hover:underline" href="/blog/">Blog</a>.
+    </p>
+    
     <div class="mt-8 relative bg-sky-200 dark:bg-gray-800">
         <div id="artwork-container" class="flex flex-col items-center opacity-0 transition-opacity duration-1000">
             {% assign artworks = site.data.artwork %}
@@ -23,8 +42,7 @@ fullwidth: true
             <div class="relative w-full">
                 {% for character in artwork.characters %}
                     <!-- Floating Label -->
-                    <div class="absolute text-black char-info-label bg-white/80 dark:text-white dark:bg-black/80 text-sm p-3 rounded shadow-md"
-                        style="width: max-content;"
+                    <div class="absolute text-black max-w-max char-info-label bg-white/80 dark:text-white dark:bg-black/80 text-sm p-3 rounded shadow-md"
                         data-position-desktop-top="{{ character.position.desktop.top }}"
                         data-position-desktop-left="{{ character.position.desktop.left }}"
                         data-position-mobile-top="{{ character.position.mobile.top }}"
@@ -52,14 +70,20 @@ fullwidth: true
             {% endfor %}
         </div>
     </div>
-    <h1 class="text-4xl font-bold mt-4">Thank you for watching!</h1>
+    
+    {% if page.artwork_chars_done == 15 %}
+        <h1 class="text-4xl font-bold mt-4">Thank you for watching!</h1>
+    {% else %}
+        <p class="font-bold mt-4">Check back later to see the artwork unfold — New surprises may be waiting for you!</p>
+    {% endif %}
     <p id="thank-you" class="mt-4 text-gray-700 dark:text-gray-300">
-        You can download the full image <a class="text-blue-500 hover:underline" target="_blank" href="/assets/artwork/full.png">here</a><br>
+        {% if page.artwork_chars_done == 15 %}You can download the full image <a class="text-blue-500 hover:underline" target="_blank" href="/assets/artwork/full.png">here</a><br>{% endif %}
         Drawing base taken from: <a class="text-blue-500 hover:underline" target="_blank" href="https://www.deviantart.com/ririkaze/art/Durarara-ED-Trust-Me-Base-163252995">Durarara ED Trust Me Base by ririkaze</a>
     </p>
-    <button id="scroll-music-btn" class="fixed bottom-4 left-4 bg-blue-500 hover:bg-blue-600 dark:bg-blue-900 text-white px-4 py-2 
-    rounded-full shadow-lg flex items-center gap-2 transition">
-        <span id="scroll-music-text">▶️ Play</span>
-    </button>
-
+    {% if page.artwork_chars_done == 15 %}
+        <button id="scroll-music-btn" class="fixed cursor-pointer bottom-4 left-4 bg-blue-500 hover:bg-blue-600 dark:bg-blue-900 text-white px-4 py-2 
+        rounded-full shadow-lg flex items-center gap-2 transition">
+            <span id="scroll-music-text">▶️ Play</span>
+        </button>
+    {% endif %}
 </section>

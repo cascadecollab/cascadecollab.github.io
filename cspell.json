@@ -12,6 +12,10 @@
         {
             "language": "es",
             "filename": "**/es/*.html"
+        },
+        {
+            "language": "es",
+            "filename": "**/es/*.md"
         }
     ]
 }

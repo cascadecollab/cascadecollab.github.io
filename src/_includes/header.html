@@ -28,6 +28,13 @@
                 </li>
                 <li>
                     {% if page.lang == 'es' %}
+                        <a href="/es/project/" class="{% if page.url == '/es/project/' %}font-bold{% endif %} hover:underline">Proyecto</a>
+                    {% else %}
+                        <a href="/project/" class="{% if page.url == '/project/' %}font-bold{% endif %} hover:underline">Project</a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if page.lang == 'es' %}
                         <a href="/es/participate/" class="{% if page.url == '/es/participate/' %}font-bold{% endif %} hover:underline">Participa</a>
                     {% else %}
                         <a href="/participate/" class="{% if page.url == '/participate/' %}font-bold{% endif %} hover:underline">Participate</a>
@@ -38,6 +45,13 @@
                         <a href="/es/artwork/" class="{% if page.url == '/es/artwork/' %}font-bold{% endif %} hover:underline">La Ilustración</a>
                     {% else %}
                         <a href="/artwork/" class="{% if page.url == '/artwork/' %}font-bold{% endif %} hover:underline">The Artwork</a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if page.lang == 'es' %}
+                        <a href="/es/contact/" class="{% if page.url == '/es/contact/' %}font-bold{% endif %} hover:underline">Contacto</a>
+                    {% else %}
+                        <a href="/contact/" class="{% if page.url == '/contact/' %}font-bold{% endif %} hover:underline">Contact</a>
                     {% endif %}
                 </li>
             </ul>

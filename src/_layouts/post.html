@@ -6,7 +6,7 @@ layout: default
     <h1 class="text-4xl font-bold">{{ page.title }}</h1>
     {% include date.html date=page.date %}
     <p class="text-gray-600 text-sm">{% if page.lang == 'es' %}{{ day }} {{ month }} {{ year }}{% else %}{{ month }} {{ day }}, {{ year }}{% endif %}</p>
-    <div class="mt-6 text-gray-700 dark:text-gray-300">
+    <div class="mt-6 text-gray-700 dark:text-gray-300 space-y-4">
         {{ content }}
     </div>
     {% if page.lang == 'es' %}

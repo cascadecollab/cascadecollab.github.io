@@ -3,18 +3,38 @@ layout: default
 title: Cascade Collab - Ilustración
 lang: es
 fullwidth: true
+no_footer: true
+artwork_chars_done: 0
 ---
 
 <section class="text-center">
     <h1 class="text-4xl font-bold">La Ilustración</h1>
     <p class="mt-4 text-gray-700 dark:text-gray-300">
-        Una colaboración que presenta los estilos de múltiples artistas.
+        {% if page.artwork_chars_done == 0 %}
+            Esta página contendrá la ilustración final eventualmente, por ahora solo es 
+            la referencia base.
+        {% elsif page.artwork_chars_done < 15 %}
+            Esta página contendrá la ilustración final eventualmente, los personajes 
+            se irán añadiendo conforme estén terminados.
+        {% else %}
+            This is the final result of the collaboration. Enjoy it!
+            Este es el resultado final de la colaboración ¡Disfrútenlo!
+        {% endif %}
     </p>
     <p class="mt-4 text-gray-700 dark:text-gray-300">
-        Puedes usar el botón ▶️ Reproducir en la esquina inferior izquierda para reproducir la animación.<br>
-        <b>Por favor, para una mejor experiencia, no deslices la pantalla mientras la animación 
+        {% if page.artwork_chars_done < 15 %}
+            Puedes deslizar para abajo para ver que personajes serán dibujados.<br>
+            Los personajes se irán revelando gradualmente.
+        {% else %}
+            Puedes usar el botón ▶️ Reproducir en la esquina inferior izquierda para reproducir la animación.<br>
+            <b>Por favor, para una mejor experiencia, no deslices la pantalla mientras la animación 
             se está reproduciendo.</b><br>
-        Puedes pausarla en cualquier momento pulsando el botón de nuevo.
+            Puedes pausarla en cualquier momento pulsando el botón de nuevo.
+        {% endif %}
+    </p>
+
+    <p class="mt-4 text-gray-700 dark:text-gray-300">
+        Mantente al día respecto el progreso del proyecto en el <a class="text-blue-500 hover:underline" href="/es/blog/">Blog</a>.
     </p>
 
     <div class="mt-8 relative bg-sky-200 dark:bg-gray-800">
@@ -24,8 +44,7 @@ fullwidth: true
             <div class="relative w-full">
                 {% for character in artwork.characters %}
                     <!-- Floating Label -->
-                    <div class="absolute text-black char-info-label bg-white/80 dark:text-white dark:bg-black/80 text-sm p-3 rounded shadow-md"
-                        style="width: max-content;"
+                    <div class="absolute text-black max-w-max char-info-label bg-white/80 dark:text-white dark:bg-black/80 text-sm p-3 rounded shadow-md"
                         data-position-desktop-top="{{ character.position.desktop.top }}"
                         data-position-desktop-left="{{ character.position.desktop.left }}"
                         data-position-mobile-top="{{ character.position.mobile.top }}"
@@ -33,7 +52,7 @@ fullwidth: true
                                     
                     <p class="text-xs text-gray-600 dark:text-gray-300">{{ character.franchise }}</p>
                     <p class="font-bold">{{ character.name }}</p>
-                    <p class="text-sm">by {{ character.artist.name }}</p>
+                    <p class="text-sm">por {{ character.artist.name }}</p>
 
                     <!-- Social Media Links -->
                     <div class="flex gap-2 mt-1">
@@ -53,14 +72,20 @@ fullwidth: true
             {% endfor %}
         </div>
     </div>
-    <h1 class="text-4xl font-bold mt-4">¡Gracias por verlo!</h1>
+    {% if page.artwork_chars_done == 15 %}
+        <h1 class="text-4xl font-bold mt-4">¡Gracias por verlo!</h1>
+    {% else %}
+        <p class="font-bold mt-4">Vuelve más tarde para ver como se desarrolla la obra de arte — ¡Nuevas sorpresas pueden estar esperándote!</p>
+    {% endif %}
     <p id="thank-you" class="mt-4 text-gray-700 dark:text-gray-300">
-        Puedes descargarte la imagen completa <a class="text-blue-500 hover:underline" target="_blank" href="/assets/artwork/full.png">aquí</a><br>
+        {% if page.artwork_chars_done == 15 %}Puedes descargarte la imagen completa <a class="text-blue-500 hover:underline" target="_blank" href="/assets/artwork/full.png">aquí</a><br>{% endif %}
         Referencia base obtenida de: <a class="text-blue-500 hover:underline" target="_blank" href="https://www.deviantart.com/ririkaze/art/Durarara-ED-Trust-Me-Base-163252995">Durarara ED Trust Me Base by ririkaze</a>
     </p>
-    <button id="scroll-music-btn" class="fixed bottom-4 left-4 bg-blue-500 hover:bg-blue-600 dark:bg-blue-900 text-white px-4 py-2 
-    rounded-full shadow-lg flex items-center gap-2 transition">
-        <span id="scroll-music-text">▶️ Reproducir</span>
-    </button>
+    {% if page.artwork_chars_done == 15 %}
+        <button id="scroll-music-btn" class="fixed cursor-pointer bottom-4 left-4 bg-blue-500 hover:bg-blue-600 dark:bg-blue-900 text-white px-4 py-2 
+        rounded-full shadow-lg flex items-center gap-2 transition">
+            <span id="scroll-music-text">▶️ Reproducir</span>
+        </button>
+    {% endif %}
 
 </section>
