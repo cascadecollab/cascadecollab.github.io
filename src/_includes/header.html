@@ -58,35 +58,69 @@
         </nav>
 
         <!-- Theme & Language Switchers -->
-        <div class="flex gap-4 mt-4 md:mt-0">
-            <select id="theme-switcher" class="p-2 bg-white dark:bg-gray-800 text-black dark:text-white border rounded" onchange="setTheme(this.value)">
-                <option value="system">
-                    {% if page.lang == 'es' %}
-                        &#127760; Tema
-                    {% else %}
-                        &#127760; Theme
-                    {% endif %}
-                </option>
-                <option value="light">
-                    {% if page.lang == 'es' %}
-                        &#9728;&#65039; Claro
-                    {% else %}
-                        &#9728;&#65039; Light
-                    {% endif %}
-                </option>
-                <option value="dark">
-                    {% if page.lang == 'es' %}
-                        &#127769; Oscuro
-                    {% else %}
-                        &#127769; Dark
-                    {% endif %}
-                </option>
-            </select>
-
-            <select id="language-switcher" class="p-2 bg-white dark:bg-gray-800 text-black dark:text-white border rounded" onchange="switchLanguage(this.value)">
-                <option value="en">&#127468;&#127463; English</option>
-                <option value="es">&#127466;&#127480; Español</option>
-            </select>
+        {% assign themeLabel = 'Theme' %}
+        {% if page.lang == 'es' %}
+            {% assign themeLabel = 'Tema' %}
+        {% endif %}
+        <div class="flex gap-4 mt-4 md:mt-0 relative">
+            <!-- Theme Switcher -->
+            <div class="relative">
+                <div class="flex items-center cursor-pointer bg-white dark:bg-gray-800 text-black dark:text-white border rounded p-2" onclick="toggleDropdown('theme-dropdown')">
+                    <img id="selected-theme-icon" src="/assets/img/theme-system.png" alt="Theme" class="w-5 h-5 mr-2">
+                    <span id="selected-theme-text" data-default-label="{{ themeLabel }}">{{ themeLabel }}</span>
+                </div>
+                <div id="theme-dropdown" class="absolute hidden bg-white dark:bg-gray-800 text-black dark:text-white border rounded-lg shadow-lg w-32 mt-2">
+                    <div class="p-2 space-y-2">
+                        <div id="theme-system" class="flex items-center p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700" onclick="setTheme('system')">
+                            <img src="/assets/img/theme-system.png" alt="System" class="w-5 h-5 mr-2">
+                            {% if page.lang == 'es' %}
+                                Sistema
+                            {% else %}
+                                System
+                            {% endif %}
+                        </div>
+                        <div id="theme-light" class="flex items-center p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700" onclick="setTheme('light')">
+                            <img src="/assets/img/theme-light.png" alt="Light" class="w-5 h-5 mr-2">
+                            {% if page.lang == 'es' %}
+                                Claro
+                            {% else %}
+                                Light
+                            {% endif %}
+                        </div>
+                        <div id="theme-dark" class="flex items-center p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700" onclick="setTheme('dark')">
+                            <img src="/assets/img/theme-dark.png" alt="Dark" class="w-5 h-5 mr-2">
+                            {% if page.lang == 'es' %}
+                                Oscuro
+                            {% else %}
+                                Dark
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Language Switcher -->
+            <div class="relative">
+                <div class="flex items-center cursor-pointer bg-white dark:bg-gray-800 text-black dark:text-white border rounded p-2" onclick="toggleDropdown('language-dropdown')">
+                    <img id="selected-language-icon" src="/assets/img/lang-{{ page.lang }}.png" alt="Language" class="w-5 h-5 mr-2">
+                    <span id="selected-language-text">
+                        {% if page.lang == 'es' %}
+                            Español
+                        {% else %}
+                            English
+                        {% endif %}
+                    </span>
+                </div>
+                <div id="language-dropdown" class="absolute hidden bg-white dark:bg-gray-800 text-black dark:text-white border rounded-lg shadow-lg w-32 mt-2">
+                    <div class="p-2 space-y-2">
+                        <div id="lang-en" class="flex items-center p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700" onclick="switchLanguage('en')">
+                            <img src="/assets/img/lang-en.png" alt="English" class="w-5 h-5 mr-2"> English
+                        </div>
+                        <div id="lang-es" class="flex items-center p-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700" onclick="switchLanguage('es')">
+                            <img src="/assets/img/lang-es.png" alt="Español" class="w-5 h-5 mr-2"> Español
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Project Description -->

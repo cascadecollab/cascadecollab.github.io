@@ -5,6 +5,7 @@ function setTheme(theme) {
         localStorage.setItem('theme', theme);
     }
     updateTheme();
+    document.getElementById('theme-dropdown').classList.add('hidden');
 }
 
 function updateTheme() {
@@ -15,7 +16,12 @@ function updateTheme() {
         (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
     );
     if(localStorage.theme) {
-        document.getElementById('theme-switcher').value = localStorage.theme;
+        const selectedTheme = document.getElementById(`theme-${localStorage.theme}`);
+        document.getElementById('selected-theme-icon').src = `/assets/img/theme-${localStorage.theme}.png`;
+        document.getElementById('selected-theme-text').textContent = selectedTheme.textContent;
+    } else {
+        document.getElementById('selected-theme-icon').src = `/assets/img/theme-system.png`;
+        document.getElementById('selected-theme-text').textContent = document.getElementById('selected-theme-text').dataset.defaultLabel;
     }
 }
 
@@ -27,6 +33,7 @@ function switchLanguage(lang) {
     } else if (lang === 'en' && currentPath.startsWith('/es')) {
         window.location.pathname = currentPath.substring(3) || '/';
     }
+    document.getElementById('language-dropdown').classList.add('hidden');
 }
 
 function initLanguage() {
@@ -53,8 +60,14 @@ function initLanguage() {
     if(currentLang !== lang) {
         switchLanguage(lang);
     } else {
-        document.getElementById('language-switcher').value = lang;
+        document.getElementById('selected-language-icon').src = `/assets/img/lang-${lang}.png`;
+        document.getElementById('selected-language-text').textContent = document.getElementById(`lang-${lang}`).textContent;
     }
+}
+
+
+function toggleDropdown(id) {
+    document.getElementById(id).classList.toggle('hidden');
 }
 
 function toggleMenuMobile() {
@@ -100,4 +113,10 @@ function getCurrentLanguage() {
 document.addEventListener("DOMContentLoaded", () => {
     updateTheme();
     initLanguage();
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.relative')) {
+            document.getElementById('theme-dropdown').classList.add('hidden');
+            document.getElementById('language-dropdown').classList.add('hidden');
+        }
+    });
 });
