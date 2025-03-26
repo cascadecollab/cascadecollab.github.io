@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% capture project_description %}{% include project_description.html %}{% endcapture %}
+    {% capture og_url %}{{site.url}}{{page.url}}{% endcapture %}
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:type" content="{{ page.og_type }}">
+    <meta property="og:image" content="{{site.url}}{{page.og_image}}">
+    <meta property="og:url" content="{{ og_url }}">
+    <meta property="og:description" content="{{ page.og_description | default: project_description }}">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <script src="/assets/js/main.js"></script>

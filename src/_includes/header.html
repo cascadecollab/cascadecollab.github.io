@@ -125,13 +125,7 @@
 
         <!-- Project Description -->
         <div class="w-full text-center mt-4">
-            <p class="text-gray-200 dark:text-gray-300">
-                {% if page.lang == 'es' %}
-                    Un proyecto de colaboración para conectar aristas y fans ¡Exhíbe tu arte en esta particular pieza!
-                {% else %}
-                    A collaborative art project to connect artists and fans. Showcase your art in this unique piece!
-                {% endif %}
-            </p>
+            <p class="text-gray-200 dark:text-gray-300">{% include project_description.html %}</p>
         </div>
     </div>
 </header>

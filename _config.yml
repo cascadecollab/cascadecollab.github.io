@@ -31,11 +31,17 @@ source: src
 defaults:
   - scope:
       path: ""
+    values:
+      og_type: "website"
+      og_image: "/assets/img/logo.png"
+  - scope:
+      path: ""
       type: "posts"
     values:
       permalink: /blog/:year/:month/:day/:title/
       lang: en
       layout: post
+      og_type: "article"
   - scope:
       path: "_posts/es"
       type: "posts"

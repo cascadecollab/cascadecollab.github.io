@@ -1,5 +1,6 @@
 ---
 title: Project Launch
+og_description: Today is the day this project officially launches
 ---
 
 Today is the day this project officially launches.

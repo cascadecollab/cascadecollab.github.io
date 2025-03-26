@@ -1,5 +1,6 @@
 ---
 title: Lanzamiento del Proyecto
+og_description: Hoy es el día del lanzamiento oficial del proyecto
 ---
 
 Hoy es el día del lanzamiento oficial del proyecto.
