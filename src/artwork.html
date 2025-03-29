@@ -49,7 +49,12 @@ artwork_chars_done: 0
                         data-position-mobile-left="{{ character.position.mobile.left }}">
                                     
                     <p class="text-xs text-gray-600 dark:text-gray-300">{{ character.franchise }}</p>
-                    <p class="font-bold">{{ character.name }}</p>
+                    <p>
+                    {%- if character.highlight -%}
+                        <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mr-1"></span>
+                    {%- endif -%}
+                    <span class="font-bold">{{ character.name }}</span>
+                    </p>
                     <p class="text-sm">by {{ character.artist.name }}</p>
 
                     <!-- Social Media Links -->
