@@ -3,6 +3,7 @@ layout: default
 title: Blog
 permalink: /blog/
 lang: en
+og_description: Stay up to date with project updates in the Blog.
 ---
 
 <ul>
@@ -13,7 +14,7 @@ lang: en
       <a href="{{ post.url }}" class="text-blue-500 hover:underline text-2xl font-semibold">
         {{ post.title }}
       </a>
-      <p class="text-gray-500 text-sm dark:test-gray-300">{{ month }} {{ day }}, {{ year }}</p>
+      <p class="text-gray-600 text-sm dark:text-gray-400">{{ month }} {{ day }}, {{ year }}</p>
       <div class="mt-2 text-gray-700 dark:text-gray-400">
         {{ post.excerpt }}
       </div>
