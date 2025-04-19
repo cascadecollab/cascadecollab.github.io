@@ -18,7 +18,7 @@
           top: "25%"
           left: "40%"
         mobile:
-          top: "25%"
+          top: "10%"
           left: "40%"
 
 - image: "segment-02-wip.png"
