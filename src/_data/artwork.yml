@@ -1,12 +1,18 @@
-- image: "1.png"
+- image: "segment-01-wip.png"
   characters:
     - franchise: "Honkai: Star Rail"
       name: "Silver Wolf"
       artist:
-        name: "???"
+        name: "Prophosphere"
         socials:
-          - platform: "placeholder"
-            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+          - platform: "vgen"
+            link: "https://vgen.co/prophosphere"
+          - platform: "twitter"
+            link: "https://x.com/prophosphere"
+          - platform: "pixiv"
+            link: "https://www.pixiv.net/en/users/3774060"
+          - platform: "deviantart"
+            link: "https://www.deviantart.com/prophosphere"
       position:
         desktop:
           top: "25%"
@@ -15,7 +21,7 @@
           top: "25%"
           left: "40%"
 
-- image: "2.png"
+- image: "segment-02-wip.png"
   characters:
     - franchise: "???"
       name: "???"
