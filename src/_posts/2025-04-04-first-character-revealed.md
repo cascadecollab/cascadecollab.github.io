@@ -12,6 +12,6 @@ The first character, which will be at the top of the illustration is...
 
 Silver Wolf from **Honkai: Star Rail**. She will be the first character to be added to the illustration.
 
-As mentioned on my previous post I will now proceed to look through the interested artists and chose one.
+As mentioned on my previous post I will now proceed to look through the interested artists and choose one.
 
 See ya!
