@@ -1,4 +1,4 @@
-- image: "segment-01-wip.png"
+- image: "segment-01.png"
   characters:
     - franchise: "Honkai: Star Rail"
       name: "Silver Wolf"
@@ -26,10 +26,14 @@
     - franchise: "Honkai: Star Rail"
       name: "Firefly"
       artist:
-        name: "???"
+        name: "Balandis"
         socials:
-          - platform: "placeholder"
-            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+          - platform: "portfolio"
+            link: "https://balandis.portfoliobox.net/"
+          - platform: "instagram"
+            link: "https://www.instagram.com/palo_bb"
+          - platform: "deviantart"
+            link: "https://www.deviantart.com/balandis-meow"
       position:
         desktop:
           top: "10%"
