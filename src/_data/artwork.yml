@@ -21,7 +21,7 @@
           top: "10%"
           left: "40%"
 
-- image: "segment-02-wip.png"
+- image: "segment-02-wip3.png"
   characters:
     - franchise: "Honkai: Star Rail"
       name: "Firefly"
@@ -41,13 +41,17 @@
         mobile:
           top: "10%"
           left: "50%"
-    - franchise: "???"
-      name: "???"
+    - franchise: "Genshin Impact"
+      name: "Mona"
       artist:
-        name: "???"
+        name: "Kazenokaze"
         socials:
-          - platform: "placeholder"
-            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+          - platform: "deviantart"
+            link: "https://www.deviantart.com/kazenokaze"
+          - platform: "twitter"
+            link: "https://x.com/XKazenokaze"
+          - platform: "pixiv"
+            link: "https://www.pixiv.net/users/667109"
       position:
         desktop:
           top: "45%"
@@ -56,7 +60,7 @@
           top: "45%"
           left: "35%"
 
-- image: "3.png"
+- image: "segment-03-wip2.png"
   characters:
     - franchise: "???"
       name: "???"
