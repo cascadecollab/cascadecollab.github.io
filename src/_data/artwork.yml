@@ -21,7 +21,7 @@
           top: "10%"
           left: "40%"
 
-- image: "segment-02-wip3.png"
+- image: "segment-02-final.png"
   characters:
     - franchise: "Honkai: Star Rail"
       name: "Firefly"
@@ -60,15 +60,21 @@
           top: "45%"
           left: "35%"
 
-- image: "segment-03-wip2.png"
+- image: "segment-03-wip3.png"
   characters:
-    - franchise: "???"
-      name: "???"
+    - franchise: "Genshin Impact"
+      name: "Zhongli"
       artist:
-        name: "???"
+        name: "Lowder"
         socials:
-          - platform: "placeholder"
-            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+          - platform: "portfolio"
+            link: "https://lowder.carrd.co"
+          - platform: "vgen"
+            link: "https://vgen.co/Lowderilustration"
+          - platform: "twitter"
+            link: "https://x.com/lowder_art"
+          - platform: "instagram"
+            link: "https://www.instagram.com/lowder_ilustration"
       position:
         desktop:
           top: "0%"
