@@ -60,7 +60,7 @@
           top: "45%"
           left: "35%"
 
-- image: "segment-03-wip4.png"
+- image: "segment-03-final.png"
   characters:
     - franchise: "Genshin Impact"
       name: "Zhongli"
@@ -82,7 +82,7 @@
         mobile:
           top: "0%"
           left: "40%"
-    - franchise: "Zenless Zone Sone"
+    - franchise: "Zenless Zone Zero"
       name: "Zhu Yuan"
       artist:
         name: "kgfantasy"
@@ -102,13 +102,17 @@
         mobile:
           top: "50%"
           left: "35%"
-    - franchise: "???"
-      name: "???"
+    - franchise: "Zenless Zone Zero"
+      name: "Von Lycaon"
       artist:
-        name: "???"
+        name: "Udelart"
         socials:
-          - platform: "placeholder"
-            link: "https://www.youtube.com/watch?v=5mQDwLoWFZA"
+          - platform: "vgen"
+            link: "https://vgen.co/Udelart"
+          - platform: "twitter"
+            link: "https://x.com/Udel4rt_"
+          - platform: "portfolio"
+            link: "https://artistree.io/udelart"
       position:
         desktop:
           top: "75%"
@@ -117,7 +121,7 @@
           top: "75%"
           left: "25%"
 
-- image: "segment-04-wip.png"
+- image: "segment-04-wip2.png"
   characters:
     - franchise: "???"
       name: "???"
